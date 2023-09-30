@@ -1,0 +1,11 @@
+:root{
+  --gold : rgb(237, 167, 32);
+  --gold70 : rgba(237, 169, 32, 0.7);
+  --yellowLight : #ffb517;
+}
+
+.prompt{      
+  color: var(--yellowLight);
+  font-size: 20px;
+  padding: 10px 20px;   
+}

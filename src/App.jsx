@@ -1,9 +1,12 @@
 import InputForm from "./Components/InputForm/InputForm";
+import './App.css';
 
 export default function App(){
   return(    
     <section className="container">
-    <InputForm />
+      <div className='input-form-container'>
+        <InputForm />
+      </div>
     </section>
   );
 }
