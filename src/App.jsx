@@ -1,7 +1,9 @@
+import InputForm from "./Components/InputForm/InputForm";
+
 export default function App(){
-  return(
-    <>
-    <h1>Accounting Software with Vite</h1>
-    </>
+  return(    
+    <section className="container">
+    <InputForm />
+    </section>
   );
 }
