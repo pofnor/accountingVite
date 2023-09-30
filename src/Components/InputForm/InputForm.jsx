@@ -5,10 +5,8 @@ import './InputForm.css';
 import Post from '../Post/Post';
 
 export default function InputForm(){
-
-  const [data, setData] = useState([]);
+  
   // const [loadingData, setLoadingData] = useState(true);
-  const [refreshData, setRefreshData] = useState(false);
   const [balance, setBalance] = useState(0);
   const [bill, setBill] = useState('');
   const [yDate, setYDate] = useState('');
@@ -17,16 +15,9 @@ export default function InputForm(){
   const [isIncome, setIsIncome] = useState(false);
   const [error, setError] = useState('');
 
-  const getData = async () => {
-    const response = await axios.get('http://localhost:3002/accounting')
-    setData(response.data);
-    // setLoadingData(false);
-  }
-
   const getBalance = async () => {
     const response = await axios.get('http://localhost:3002/accounting')
-    setBalance(response.data[response.data.length-1].balance);
-    console.log("getBalance",balance);
+    setBalance(response.data[response.data.length-1].balance);    
     // setLoadingData(false);
   }
   
@@ -48,16 +39,10 @@ export default function InputForm(){
     } else setError("The Date is invalid"); 
     
   }
-  
-  
+    
   useEffect(()=>{
     getBalance()
   },[balance]);
-
-  useEffect(()=>{
-    getData()
-  },[refreshData]);
-
 
   return(    
     <form onSubmit={(e)=>{handleSubmit(e)}}>      
