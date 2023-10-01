@@ -45,7 +45,7 @@ export default function InputForm(){
   },[balance]);
 
   return(    
-    <form onSubmit={(e)=>{handleSubmit(e)}}>      
+    <form autoComplete='off' onSubmit={(e)=>{handleSubmit(e)}}>      
       <div className='input-group pt-5'>
         <div className='form-floating'>
           <input className='form-control' id='year' type='text' placeholder='Year' value={yDate} onChange={(e)=> setYDate(e.target.value)}></input>
