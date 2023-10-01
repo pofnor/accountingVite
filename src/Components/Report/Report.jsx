@@ -15,22 +15,22 @@ export default function Report(){
       <br></br><br></br>
       <table className='table table-dark table-striped table-hover'>
         <thead key={"thead"}>
-        <tr key={"trHead"}>
-        <th style={{color:"gold"}} key={"Balance"}>Balance</th>
-        <th style={{color:"gold"}} key={"Bill"}>Bill</th>      
-        <th style={{color:"gold"}} key={"Year"}>Year</th>
-        <th style={{color:"gold"}} key={"Month"}>Month</th>
-        <th style={{color:"gold"}} key={"Day"}>Day</th>
+        <tr>
+        <th style={{color:"gold"}}>Balance</th>
+        <th style={{color:"gold"}}>Bill</th>      
+        <th style={{color:"gold"}}>Year</th>
+        <th style={{color:"gold"}}>Month</th>
+        <th style={{color:"gold"}}>Day</th>
         </tr>
         </thead>      
         {data.map(accounting => 
           <tbody key={accounting.id+"tBody"}>
-            <tr key={accounting.id+"trBody"}>
-              <td key={accounting.id+"balance"}>{accounting.balance}</td>
-              <td key={accounting.id+"isIncome"}>{accounting.isIncome==="true" ? "+" + accounting.bill : "-" + accounting.bill}</td>
-              <td key={accounting.id+"y"}>{accounting.y}</td>
-              <td key={accounting.id+"m"}>{accounting.m}</td>
-              <td key={accounting.id+"d"}>{accounting.d}</td>        
+            <tr>
+              <td>{accounting.balance}</td>
+              <td>{accounting.isIncome==="true" ? "+" + accounting.bill : "-" + accounting.bill}</td>
+              <td>{accounting.y}</td>
+              <td>{accounting.m}</td>
+              <td>{accounting.d}</td>        
             </tr>
           </tbody>
         )}
